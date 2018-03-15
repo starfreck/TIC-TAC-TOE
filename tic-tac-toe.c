@@ -203,7 +203,10 @@ void choice(char ch)
 			  break;
 			  }
 		case 'z':{break;}
-		default :{printf("\nSorry, Wrong Choice Plz.. Try Again...\n");}
+		default :{
+			 count--;
+			 printf("\nSorry, Wrong Choice Plz.. Try Again...\n");
+			 }
        }
        count++;
 }
