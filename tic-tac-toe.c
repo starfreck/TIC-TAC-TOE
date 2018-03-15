@@ -331,11 +331,11 @@ void call()
  printf("\n");
  if(count%2!=0)
  {
- printf("Enter your choie (Player-1):");
+ printf("Enter your choice (Player-1):");
  }
  else
  {
- printf("Enter your choie (Player-2):");
+ printf("Enter your choice (Player-2):");
  }
  
  scanf("%c",&ch);
