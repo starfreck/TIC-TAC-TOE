@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<conio.h>
+
 #include<stdlib.h>
 void displayDemo();
 void displayGameBoard();
@@ -10,26 +10,28 @@ void win1();
 void con2();
 void win2();
 void draw();
-char max[3][3];mat[3][3],t='a';
- char ch;
- int r=3,c=3,count=1;
- int i,j;
+char max[3][3],mat[3][3],t='a';
+char ch;
+int r=3,c=3,count=1;
+int i,j;
 
 void main()
 {
-displayDemo();
+
  while(ch!='z')
  {
+	displayDemo();
 	call();
+	getchar();
  }
-getch();
+
 }
 void choice(char ch)
 {
        switch(ch)
        {
 		case 'a': {
-			  if(max[0][0]==NULL)
+			  if(max[0][0]==0)
 			  {
 			  if(count%2!=0)
 			  {
@@ -48,7 +50,7 @@ void choice(char ch)
 			  break;
 			  }
 		case 'b': {
-			  if(max[0][1]==NULL)
+			  if(max[0][1]==0)
 			  {
 			  if(count%2!=0)
 			  {
@@ -68,7 +70,7 @@ void choice(char ch)
 			  break;
 			  }
 		case 'c': {
-			  if(max[0][2]==NULL)
+			  if(max[0][2]==0)
 			  {
 			  if(count%2!=0)
 			  {
@@ -87,7 +89,7 @@ void choice(char ch)
 			  break;
 			  }
 		case 'd': {
-			  if(max[1][0]==NULL)
+			  if(max[1][0]==0)
 			  {
 			  if(count%2!=0)
 			  {
@@ -106,7 +108,7 @@ void choice(char ch)
 			  break;
 			  }
 		case 'e': {
-			  if(max[1][1]==NULL)
+			  if(max[1][1]==0)
 			  {
 			  if(count%2!=0)
 			  {
@@ -125,7 +127,7 @@ void choice(char ch)
 			  break;
 			  }
 		case 'f': {
-			  if(max[1][2]==NULL)
+			  if(max[1][2]==0)
 			  {
 			  if(count%2!=0)
 			  {
@@ -144,7 +146,7 @@ void choice(char ch)
 			  break;
 			  }
 		case 'g': {
-			  if(max[2][0]==NULL)
+			  if(max[2][0]==0)
 			  {
 			  if(count%2!=0)
 			  {
@@ -163,7 +165,7 @@ void choice(char ch)
 			  break;
 			  }
 		case 'h': {
-			  if(max[2][1]==NULL)
+			  if(max[2][1]==0)
 			  {
 			  if(count%2!=0)
 			  {
@@ -182,7 +184,7 @@ void choice(char ch)
 			  break;
 			  }
 		case 'i': {
-			  if(max[2][2]==NULL)
+			  if(max[2][2]==0)
 			  {
 			  if(count%2!=0)
 			  {
@@ -208,7 +210,7 @@ void choice(char ch)
 
 void displayDemo()
 {
- clrscr();
+ 
  for(i=0;i<r;i++)
  {
   for(j=0;j<c;j++)
@@ -335,9 +337,9 @@ void call()
  {
  printf("Enter your choie (Player-2):");
  }
- fflush(stdin);
+ 
  scanf("%c",&ch);
- clrscr();
+ 
  printf("\n");
  choice(ch);
  con1();
@@ -350,7 +352,7 @@ void call()
 	displayGameBoard();
 	printf("Player 1 is Winner...\n");
 	printf("press any key to Exit...");
-	getch();
+	getchar();
 	exit(0);
  }
  void win2()
@@ -358,16 +360,16 @@ void call()
 	displayGameBoard();
 	printf("Player 2 is Winner...\n");
 	printf("press any key to Exit...");
-	getch();
+	getchar();
 	exit(0);
  }
  void draw()
  {
-	if(max[0][0]!=NULL && max[0][1]!=NULL && max[0][2]!=NULL && max[1][0]!=NULL && max[1][1]!=NULL && max[1][2]!=NULL && max[2][0]!=NULL && max[2][1]!=NULL && max[2][2]!=NULL)
+	if(max[0][0]!=0 && max[0][1]!=0 && max[0][2]!=0 && max[1][0]!=0 && max[1][1]!=0 && max[1][2]!=0 && max[2][0]!=0 && max[2][1]!=0 && max[2][2]!=0)
 	{       displayGameBoard();
 		printf("\nGAME DRAW...\n");
 		printf("press any key to Exit...");
-		getch();
+		getchar();
 		exit(0);
 	}
- }
+}
