@@ -232,6 +232,7 @@ void displayDemo()
 		printf("\n");
 	}
   }
+  t='a';
 }
 void displayGameBoard()
 {
@@ -351,16 +352,12 @@ void call()
  {
 	displayGameBoard();
 	printf("Player 1 is Winner...\n");
-	printf("press any key to Exit...");
-	getchar();
 	exit(0);
  }
  void win2()
  {
 	displayGameBoard();
 	printf("Player 2 is Winner...\n");
-	printf("press any key to Exit...");
-	getchar();
 	exit(0);
  }
  void draw()
@@ -368,8 +365,6 @@ void call()
 	if(max[0][0]!=0 && max[0][1]!=0 && max[0][2]!=0 && max[1][0]!=0 && max[1][1]!=0 && max[1][2]!=0 && max[2][0]!=0 && max[2][1]!=0 && max[2][2]!=0)
 	{       displayGameBoard();
 		printf("\nGAME DRAW...\n");
-		printf("press any key to Exit...");
-		getchar();
 		exit(0);
 	}
 }
