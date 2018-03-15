@@ -1,6 +1,6 @@
 #include<stdio.h>
-
 #include<stdlib.h>
+
 void displayDemo();
 void displayGameBoard();
 void choice(char ch);
